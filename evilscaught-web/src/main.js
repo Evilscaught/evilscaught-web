@@ -1,8 +1,26 @@
 import Vue from 'vue';
-import App from './App.vue';
+import Home from './pages/Home.vue';
+import Away from './components/Away.vue';
+import NotFound from './pages/PageNotFound.vue';
+
 
 Vue.config.productionTip = true;
 
+const routes = {
+    '/': Home,
+    '/home': Home,
+    '/away': Away
+}
+
 new Vue({
-    render: h => h(App)
-}).$mount('#app');
+    el: '#app',
+    data: {
+        currentRoute: window.location.pathname
+    },
+    computed: {
+        ViewComponent() {
+            return routes[this.currentRoute] || NotFound
+        }
+    },
+    render(h) { return h(this.ViewComponent) }
+})
