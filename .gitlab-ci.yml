@@ -8,6 +8,7 @@ pages:
   image: node:latest
   stage: deploy
   script:
+    - cd evilscaught-web
     - npm ci
     - npm run build
     - mv public public-vue # GitLab Pages hooks on the public folder
