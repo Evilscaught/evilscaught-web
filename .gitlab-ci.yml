@@ -3,19 +3,19 @@
 # https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html
 # https://cli.vuejs.org/guide/deployment.html#gitlab-pages
 
-pages:
- image: node:latest
- stage: deploy
- script:
-  - cd evilscaught-web
-  - npm install --progress=false
-  - npm run build
-  - rm -rf public
-  - mkdir public
-  - cp -r dist/* public
- artifacts:
-  expire_in: 1 day
-  paths:
-  - evilscaught-web/public
- only:
-  - master
+pages: # the job must be named pages
+  image: node:latest
+  stage: deploy
+  script:
+    - cd evilscaught-web
+    - npm ci
+    - npm run build
+    - mv public ../public-vue # GitLab Pages hooks on the public folder
+    - mv dist ../public # rename the dist folder (result of npm run build)
+    # optionally, you can activate gzip support wih the following line:
+    - find ../public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
+  artifacts:
+    paths:
+      - public # artifact path must be /public for GitLab Pages to pick it up
+  only:
+    - master
