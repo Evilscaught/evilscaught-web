@@ -16,6 +16,6 @@ pages:
  artifacts:
   expire_in: 1 day
   paths:
-  - public
+  - evilscaught-web/public
  only:
   - master
