@@ -9,7 +9,7 @@ pages: # the job must be named pages
   script:
     - cd evilscaught-web
     - npm ci
-    - npm run build
+    - npm run build:production
     - mv public ../public-vue # GitLab Pages hooks on the public folder
     - mv dist ../public # rename the dist folder (result of npm run build)
     # optionally, you can activate gzip support wih the following line:
