@@ -24,3 +24,5 @@ new Vue({
     },
     render(h) { return h(this.ViewComponent) }
 })
+
+console.debug(`${currentRoute}`);
