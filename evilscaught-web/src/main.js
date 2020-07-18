@@ -7,8 +7,8 @@ import NotFound from './pages/PageNotFound.vue';
 Vue.config.productionTip = true;
 
 const routes = {
-    '/evilscaught-web/': Home,
-    '/home': Home,
+    '/': Home,
+    '/evilscaught-web/home': Home,
     '/away': Away
 }
 
