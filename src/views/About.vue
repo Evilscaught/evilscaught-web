@@ -1,0 +1,9 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="my-5">This is an About page</h1>
+      </div>
+    </div>
+  </div>
+</template>

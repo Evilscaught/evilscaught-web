@@ -340,4 +340,4 @@ ASALocalRun/
 healthchecksdb
 
 # dist directory (npm run build)
-evilscaught-web/dist/
+/dist/
