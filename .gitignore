@@ -341,3 +341,6 @@ healthchecksdb
 
 # dist directory (npm run build)
 /dist/
+
+# OS X
+.DS_Store
