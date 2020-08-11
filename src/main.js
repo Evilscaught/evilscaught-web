@@ -16,6 +16,7 @@ import "./styles/app.scss";
 
 Vue.config.productionTip = false;
 
+// This is the Root View
 new Vue({
   router,
   store,

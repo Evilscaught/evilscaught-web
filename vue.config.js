@@ -14,6 +14,7 @@ module.exports =
       },
     },
   },
+  /* Required by vue-markdown-loader */
   chainWebpack(config)
   {
     config.module.rule('md')
