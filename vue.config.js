@@ -4,6 +4,8 @@ module.exports =
     process.env.NODE_ENV === 'production'
     ? '/' + process.env.CI_PROJECT_NAME + '/'
     : '/',
+  /* Required for defining vue templates in JavaScript, increases build time by 30% */
+  runtimeCompiler: false,
   css: 
   {
     loaderOptions: 
