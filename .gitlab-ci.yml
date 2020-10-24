@@ -7,6 +7,7 @@ pages: # the job must be named pages
   image: node:latest
   stage: deploy
   script:
+    - npm clean --force
     - npm cache verify
     - npm ci
     - npm run build
