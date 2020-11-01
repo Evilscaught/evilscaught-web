@@ -6,7 +6,7 @@
 # Deploys non-master branches to surge
 # https://medium.com/jubianchi-fr/preview-your-website-with-gitlab-ci-and-surge-5b861d7c9a3a
 preview:
-  image: node:6.13.7
+  image: node:6.13
   stage: deploy
   script:
     - npm ci
