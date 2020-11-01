@@ -28,7 +28,7 @@ pages: # the job must be named pages
 preview:
   stage: deploy
   script:
-    - npm install
+    - npm ci
     - npm run surge
     - SLUG=$(echo ${CI_COMMIT_BRANCH} | sed 's/[^a-zA-Z0-9\-_]/-/g ; s/-\+/-/g')
     - node_modules/.bin/surge list
