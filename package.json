@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "env NODE_ENV=production vue-cli-service build",
     "docker": "env NODE_ENV=docker vue-cli-service build",
+    "surge": "env NODE_ENV=surge vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.0.1",
+    "surge": "^0.21.6",
     "vue-loader": "^15.9.3",
     "vue-markdown-loader": "^2.4.1",
     "vue-template-compiler": "^2.6.11"
