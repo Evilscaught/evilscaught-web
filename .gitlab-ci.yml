@@ -9,7 +9,7 @@ preview:
   image: node:6.13
   stage: deploy
   script:
-    - npm ci
+    - npm install
     - npm run surge
     - SLUG=$(echo ${CI_COMMIT_BRANCH} | sed 's/[^a-zA-Z0-9\-_]/-/g ; s/-\+/-/g')
     - node_modules/.bin/surge list
