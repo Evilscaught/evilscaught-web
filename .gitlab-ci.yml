@@ -29,6 +29,7 @@ preview:
   image: node:latest
   stage: deploy
   script:
+    - npm cache verify
     - npm ci
     - npm run surge
     - SLUG=$(echo ${CI_COMMIT_BRANCH} | sed 's/[^a-zA-Z0-9\-_]/-/g ; s/-\+/-/g')
