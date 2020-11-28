@@ -34,6 +34,6 @@ preview:
     - npm run surge
     - SLUG=$(echo ${CI_COMMIT_BRANCH} | sed 's/[^a-zA-Z0-9\-_]/-/g ; s/-\+/-/g')
     - node_modules/.bin/surge list
-    - node_modules/.bin/surge dist evilscaught-beta-${SLUG}-${RANDOM}.surge.sh
+    - node_modules/.bin/surge dist evilscaught-beta-${SLUG}-${CI_COMMIT_SHORT_SHA}.surge.sh
   except:
     - master
