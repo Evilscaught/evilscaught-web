@@ -8,7 +8,7 @@ pages: # the job must be named pages
   stage: deploy
   script:
     - npm cache verify
-    - npm install --prefer-offline --no-audit
+    - npm install --prefer-offline --no-audit --no-bin-links
     - npm run build
     # GitLab Pages hooks on the public folder
     - mv public ./public-vue 
