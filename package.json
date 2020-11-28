@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "./node_modules/@vue/cli-service/bin/vue-cli-service.js serve",
-    "build": "env NODE_ENV=production ./node_modules/@vue/cli-service/bin/vue-cli-service.js build",
-    "docker": "env NODE_ENV=docker ./node_modules/@vue/cli-service/bin/vue-cli-service.js build",
-    "lint": "./node_modules/@vue/cli-service/bin/vue-cli-service.js lint"
+    "serve": "node_modules/@vue/cli-service/bin/vue-cli-service.js serve",
+    "build": "env NODE_ENV=production node_modules/@vue/cli-service/bin/vue-cli-service.js build",
+    "docker": "env NODE_ENV=docker node_modules/@vue/cli-service/bin/vue-cli-service.js build",
+    "lint": "node_modules/@vue/cli-service/bin/vue-cli-service.js lint"
   },
   "dependencies": {
     "axios": "^0.19.2",
