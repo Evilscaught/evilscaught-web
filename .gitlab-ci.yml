@@ -9,7 +9,7 @@ pages: # the job must be named pages
   script:
     - npm cache verify
     - npm install --prefer-offline --no-audit --no-bin-links
-    - ls -l -a
+    - npm rebuild
     - npm run build
     # GitLab Pages hooks on the public folder
     - mv public ./public-vue 
