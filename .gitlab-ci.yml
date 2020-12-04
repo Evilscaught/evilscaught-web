@@ -26,11 +26,12 @@ pages: # the job must be named pages
 # Deploys non-master branches to surge
 # https://medium.com/jubianchi-fr/preview-your-website-with-gitlab-ci-and-surge-5b861d7c9a3a
 preview:
-  image: node:latest
+  image: node:14.5.0
   stage: deploy
   script:
     - npm cache verify
     - npm install --prefer-offline --no-audit --no-bin-links
+    - npm rebuild
     - npm run surge
     - SLUG=$(echo ${CI_COMMIT_BRANCH} | sed 's/[^a-zA-Z0-9\-_]/-/g ; s/-\+/-/g')
     - node_modules/surge/lib/cli.js list
