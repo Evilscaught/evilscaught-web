@@ -50,7 +50,8 @@ sudo git clone https://gitlab.com/Evilscaught/evilscaught-web.git
 - Omitting the `sudo` command may result in the operation being denied.
 
 6. Navigate into the directory of your newly cloned repository
-7. Run `npm install` to install all dependencies
+7. Run `npm install --prefer-offline --no-audit --no-bin-links` to install all dependencies
+- It is essential to include all three flags whenever running this command
 8. Run `npm run serve` to start the server.
 9. The server will be listening at https://localhost:8080.
 - Using the `--https` flag will allow you start the local server with an encrypted connection.  However, firefox will warn you with a potential security risk ahead.  To bypass the block, click on 'Advanced...' and then 'Accept the Risk and Continue'.
@@ -99,7 +100,7 @@ evilscaught-web/  # The root directory
 |   babel.config.js # Babel Global Configuration File
 |   dependencies.md # Documentation on dependencies used throughout development
 |   package.json 
-|   package-lock.json
+|   npm-shrinkwrap.json # package-lock.json alternative, enforces strict dependency versioning
 |   README.md
 |   vue.config.js   # Global Configuration file loaded by @vue/cli-service
 ```
