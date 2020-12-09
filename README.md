@@ -37,9 +37,9 @@ These instructions assume that you've got a full-featured bash environment worki
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 ```
 2. Restart the WSL 
-3. Download and install Node.js
+3. Download and install Node.js version 14.5.0
 ```bash
-nvm install node
+nvm install 14.5.0
 ```
 - npm will be automatically installed with Node.js
 4. Once finished you can verify that node and npm were installed with `node --version` and `npm --version`  
