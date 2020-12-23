@@ -30,10 +30,16 @@ const routes = [
     name: "Employees",
     component: () => import("@/views/Employees.vue"),
   },
+  {
+    path: "/*",
+    name: "PageNotFound",
+    component: () => import("@/views/PageNotFound.vue"),
+  },
 ];
 
+
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
 });

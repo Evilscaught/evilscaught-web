@@ -12,8 +12,10 @@
 <script>
 import Todos from "@/components/todos/Todos";
 
-export default {
-  components: {
+export default 
+{
+  components: 
+  {
     Todos
   }
 };
